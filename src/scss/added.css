@@ -1,0 +1,66 @@
+header{
+	padding: 20px 0 30px;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.logo {
+    float: left;
+}
+.logo-text {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    float: right;
+    padding-top:18px;
+}
+.cover-image {
+    margin-bottom: 1px;
+}
+.filter-row {
+    background: #f4c000;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.filter_item {
+    width: 340px;
+    margin-right: 38px;
+    float: right;
+}
+.filter_item_btn{
+	float: right;
+}
+.filter_submit{
+	font-weight: bold;
+	color:#333;
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+.filter_item .form-control{
+	border: none;
+	outline: none;
+	box-shadow: none;
+	padding-right: 40px;
+	font-family: 'Open Sans', sans-serif;
+}
+.filter-date{
+	background-image: url(../images/filter_date.png);
+	background-repeat: no-repeat;
+	background-position: center right ;
+}
+.filter-address{
+	background-image: url(../images/filter_address.png);
+	background-repeat: no-repeat;
+	background-position: center right ;
+}
+.category-menu {
+    padding: 20px 25px;
+    background: #e6e6e6;
+}
+.category-item{
+	padding: 20px 15px;
+	margin-bottom: 1px;
+	background-color: #e3d9b6;
+}
