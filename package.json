@@ -17,6 +17,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "dev": "cross-env NODE_ENV=dev webpack-serve --open --config webpack.config.js",
+    "watch": "cross-env NODE_ENV=dev  webpack-dev-server --mode development --open --hot --config webpack.config.js",
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix"
   },
@@ -59,7 +60,8 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.19.1",
     "webpack-cli": "^3.1.0",
-    "webpack-serve": "^2.0.2"
+    "webpack-serve": "^2.0.2",
+    "webpack-dev-server": "^3.1.10"
   },
   "lint-staged": {
     "package.json": [
