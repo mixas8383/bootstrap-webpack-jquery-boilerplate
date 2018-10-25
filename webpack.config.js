@@ -16,7 +16,7 @@ const config = {
     customc: './src/custom.js',
   },
   output: {
-    filename: '[name].[hash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -122,7 +122,7 @@ const config = {
       },
     }),
     new ExtractTextPlugin('./css/[name].css'),
-    new webpack.HashedModuleIdsPlugin(),
+    //new webpack.HashedModuleIdsPlugin(),
   ],
   optimization: {
     runtimeChunk: 'single',
