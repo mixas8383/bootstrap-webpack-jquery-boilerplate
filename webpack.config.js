@@ -11,7 +11,10 @@ const IS_DEV = process.env.NODE_ENV === 'dev';
 const config = {
   mode: IS_DEV ? 'development' : 'production',
   devtool: IS_DEV ? 'eval' : 'source-map',
-  entry: './src/index.js',
+  entry: {
+    mainc: './src/index.js',
+    customc: './src/custom.js',
+  },
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist'),
@@ -53,7 +56,7 @@ const config = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              name: 'public/[name].[ext]?[hash:7]',
+              name: 'images/[name].[ext]',
             },
           },
           {
@@ -80,6 +83,10 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.(eot|ttf|woff2?)(\?.*$|$)/,
+        loader: 'file?name=/fonts/[name].[ext]',
+      },
     ],
   },
   plugins: [
@@ -91,20 +98,30 @@ const config = {
     }),
     new CopyWebpackPlugin([
       {
-        from: './public',
-        to: 'public',
+        from: './src/images',
+        to: 'images',
       },
     ]),
     new HtmlWebPackPlugin({
-      template: 'index.html',
-      favicon: './public/icon.ico',
+      template: './src/detail.html',
+      favicon: './src/images/icon.ico',
+      filename: 'detail.html',
       minify: !IS_DEV && {
         collapseWhitespace: true,
         preserveLineBreaks: true,
         removeComments: true,
       },
     }),
-    new ExtractTextPlugin('styles.css'),
+    new HtmlWebPackPlugin({
+      template: './src/index.html',
+      favicon: './src/images/icon.ico',
+      minify: !IS_DEV && {
+        collapseWhitespace: true,
+        preserveLineBreaks: true,
+        removeComments: true,
+      },
+    }),
+    new ExtractTextPlugin('./css/[name].css'),
     new webpack.HashedModuleIdsPlugin(),
   ],
   optimization: {
