@@ -9,4 +9,10 @@ $('#alert').click(() => {
   alert('jQuery works!');
 });
 
+$('.category-menu_cont h2').click(function() {
+  $(this)
+    .parent()
+    .toggleClass('active');
+});
+
 // Your jQuery code
