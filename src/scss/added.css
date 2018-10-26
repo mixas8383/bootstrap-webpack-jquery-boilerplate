@@ -151,6 +151,9 @@ content: 'x';
     line-height: 18px;
     margin-bottom: 10px;
 }
+.item_side > div{
+	margin-bottom: 35px;
+}
 /*Details page end*/
 
 
