@@ -91,6 +91,8 @@ const config = {
             options: {
               name: '[name].[ext]',
               outputPath: 'fonts/',
+              useRelativePath: process.env.NODE_ENV === 'production',
+              publicPath: '../fonts',
             },
           },
         ],
