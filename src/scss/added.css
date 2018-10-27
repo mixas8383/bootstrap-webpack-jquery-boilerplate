@@ -184,8 +184,19 @@ button.btn.item_submit:focus{
 }
 .item_page_information {
     background: #e6e6e6;
-    padding: 15px;
+    padding:10px 15px;
     margin: 10px 0 30px;
+}
+.info_item span{
+	font-weight: bold;
+	margin-right: 10px;
+}
+.info_item span i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.info_item{
+	margin: 5px 0;
 }
 /*Details page end*/
 
@@ -207,6 +218,37 @@ button.btn.item_submit:focus{
 }
 }
 @media only screen and (max-width: 991px) {
+	.item_page_name {
+    font-size: 22px;
+    line-height: 24px;
+}
+.info_item{
+	margin: 10px 0;
+}
+.info_item span i {
+    font-size: 18px;
+    margin-right: 10px;
+    width: 20px;
+}
+.item_params, .item_options {
+    margin-bottom: 24px;
+    line-height: 24px;
+    font-size: 14px;
+}
+.item_page_information {
+        padding: 10px 10px;
+    margin: 10px 0 10px;
+    font-size: 14px;
+    line-height: 18px;
+}
+.item_title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 24px;
+}
+	.item_page_image{
+		margin: 0 0 10px;
+	}
    .filter-row {
     padding: 10px 15px;
     text-align: center;
