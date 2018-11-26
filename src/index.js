@@ -9,10 +9,60 @@ $('#alert').click(() => {
   alert('jQuery works!');
 });
 
-$('.category-menu_cont h2').click(function() {
-  $(this)
-    .parent()
-    .toggleClass('active');
+$('.sticky_btns button').click(function() {
+  $('.sticky_btns button.active').removeClass('active');
+  $(this).addClass('active');
+  // $('.'+$(this).attr('id')).hide();
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop:
+        $('.' + $(this).attr('id')).offset().top - $('.sticky').height() - 40,
+    },
+    500
+  );
+  console.log($('.' + $(this).attr('id')).offset().top);
+});
+$(function() {
+  $('[data-toggle="popover"]').popover();
+});
+
+$('.alendar').click(function() {
+  if (
+    $(this)
+      .closest('.list_item')
+      .innerHeight() != 124
+  )
+    $(this)
+      .closest('.list_item')
+      .css('height', '124px');
+  else
+    $(this)
+      .closest('.list_item')
+      .css('height', 'auto');
 });
 
 // Your jQuery code
+
+if ($(window).width() > 999) {
+  $(window).scroll(function() {
+    var scrollDistance = $(window).scrollTop() + $('.sticky').height() + 220;
+
+    // Show/hide menu on scroll
+    //if (scrollDistance >= 850) {
+    //		$('nav').fadeIn("fast");
+    //} else {
+    //		$('nav').fadeOut("fast");
+    //}
+
+    // Assign active class to nav links while scolling
+    $('.lists').each(function(i) {
+      if ($(this).position().top <= scrollDistance) {
+        console.log($(this).position().top);
+        $('.sticky_btns button.active').removeClass('active');
+        $('.sticky_btns button')
+          .eq(i)
+          .addClass('active');
+      }
+    });
+  });
+}
