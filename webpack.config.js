@@ -16,7 +16,7 @@ const config = {
     customc: './src/custom.js',
   },
   output: {
-    filename: '[name].js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -78,7 +78,7 @@ const config = {
             loader: 'html-loader',
             options: {
               attrs: [':data-src'],
-              minimize: true,
+              minimize: false,
             },
           },
         ],
@@ -117,18 +117,18 @@ const config = {
       favicon: './src/images/icon.ico',
       filename: 'detail.html',
       minify: !IS_DEV && {
-        collapseWhitespace: true,
-        preserveLineBreaks: true,
-        removeComments: true,
+        collapseWhitespace: false,
+        preserveLineBreaks: false,
+        removeComments: false,
       },
     }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       favicon: './src/images/icon.ico',
       minify: !IS_DEV && {
-        collapseWhitespace: true,
-        preserveLineBreaks: true,
-        removeComments: true,
+        collapseWhitespace: false,
+        preserveLineBreaks: false,
+        removeComments: false,
       },
     }),
     new ExtractTextPlugin('./css/[name].css'),
