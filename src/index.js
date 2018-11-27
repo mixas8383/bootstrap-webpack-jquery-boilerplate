@@ -28,29 +28,6 @@ $(function() {
 $('.example-popover').popover({
   container: '.sticky',
 });
-$('.alendar').click(function() {
-  if (
-    $(this)
-      .closest('.list_item_in')
-      .innerHeight() != 74
-  ) {
-    $(this)
-      .closest('.list_item_in')
-      .css('height', '74px');
-    $(this)
-      .closest('.list_item_in')
-      .find('.list_item_cont_title')
-      .hide();
-  } else {
-    $(this)
-      .closest('.list_item_in')
-      .css('height', 'auto');
-    $(this)
-      .closest('.list_item_in')
-      .find('.list_item_cont_title')
-      .show();
-  }
-});
 
 // Your jQuery code
 $(window).scroll(function() {
@@ -71,6 +48,37 @@ $(window).scroll(function() {
     }
   });
 });
-if ($(window).width() <= 999) {
+if ($(window).width() > 999) {
+  $('.alendar').click(function() {
+    if (
+      $(this)
+        .closest('.list_item_in')
+        .innerHeight() != 74
+    ) {
+      $(this)
+        .closest('.list_item_in')
+        .css('height', '74px');
+      $(this)
+        .closest('.list_item_in')
+        .find('.list_item_cont_title')
+        .hide();
+    } else {
+      $(this)
+        .closest('.list_item_in')
+        .css('height', 'auto');
+      $(this)
+        .closest('.list_item_in')
+        .find('.list_item_cont_title')
+        .show();
+    }
+  });
+} else {
+  $('.alendar').click(function() {
+    $(this)
+      .closest('.list_item_in')
+      .find('.list_item_cont')
+      .toggle();
+  });
+
   $('.sticky_btns').prependTo('main');
 }

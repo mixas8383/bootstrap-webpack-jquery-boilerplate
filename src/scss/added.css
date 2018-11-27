@@ -272,6 +272,14 @@ button.btn.item_submit:focus{
     }
 }
 @media only screen and (max-width: 991px) {
+    .list_item_conts {
+        font-size: 14px;
+    }
+    .list_item_price {
+        text-align: center;
+        padding: 0;
+        font-size: 16px;
+    }
     .sticky_btns {
         position: -webkit-sticky;
         position: sticky;
@@ -283,6 +291,12 @@ button.btn.item_submit:focus{
     .points_detail {
         width: 100%;
     }
+    .alendar{
+        float: left;
+    }
+    .list_item_title{
+        font-size: 20px;
+    }
     .points {
         padding-right: 40px;
     }
@@ -292,11 +306,12 @@ button.btn.item_submit:focus{
     .lists2 .list_item_in {
          height: auto; 
     }
-    .alendar{
-        display: none;
-    }
+    
     .list_item_cont_title{
         display: block;
+    }
+    .list_item_cont{
+        display: none;
     }
 }
 
