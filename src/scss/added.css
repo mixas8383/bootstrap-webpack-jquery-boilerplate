@@ -156,14 +156,20 @@ button.btn.item_submit:focus{
         width: 24px;
         line-height: 24px;
         margin-left: 5px;
-        background: #3f6582;
+       
+        
+    background: #e47b44;
+
         border-radius: 50%;
         float: right;
         text-align: center;
     }
-.sticky_btns button.active{
-    background: #e47b44;
-}
+    .sticky_btns button.active{
+        background: #e47b44;
+    }
+    .sticky_btns button.active span{
+         background: #3f6582;
+    }
 /*start list*/
 .blts span{
     background: #fff;
@@ -212,6 +218,7 @@ button.btn.item_submit:focus{
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
+    display: none;
 }
 .blts {
     cursor: pointer;
@@ -275,13 +282,15 @@ button.btn.item_submit:focus{
     .sticky_btns button, .sticky_btns button:focus, .sticky_btns button:active{
         width: auto;
     }
-    .lists2 .list_item {
+    .lists2 .list_item_in {
          height: auto; 
     }
     .alendar{
         display: none;
     }
-    
+    .list_item_cont_title{
+        display: block;
+    }
 }
 
 

@@ -31,14 +31,23 @@ $('.alendar').click(function() {
     $(this)
       .closest('.list_item_in')
       .innerHeight() != 74
-  )
+  ) {
     $(this)
       .closest('.list_item_in')
       .css('height', '74px');
-  else
+    $(this)
+      .closest('.list_item_in')
+      .find('.list_item_cont_title')
+      .hide();
+  } else {
     $(this)
       .closest('.list_item_in')
       .css('height', 'auto');
+    $(this)
+      .closest('.list_item_in')
+      .find('.list_item_cont_title')
+      .show();
+  }
 });
 
 // Your jQuery code
