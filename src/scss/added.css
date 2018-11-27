@@ -134,14 +134,15 @@ button.btn.item_submit:focus{
     right: 0;
     cursor: pointer;
 }
-.sticky_btns button,
-.sticky_btns button:focus,
-.sticky_btns button:active{
-    background: #3f6582;
+.sticky_btns button, 
+    .sticky_btns button:focus, 
+    .sticky_btns button:active {
+        background: #3f6582;
     height: 42px;
     border: 2px solid #e47b44;
     border-radius: 5px;
     padding: 0 10px;
+    text-align: left;
     color: #fff;
     margin-right: 10px;
     display: block;
@@ -149,7 +150,17 @@ button.btn.item_submit:focus{
     outline: none;
     width: 210px;
     cursor: pointer;
-}
+    }
+    .sticky_btns button span{
+        display: inline-table;
+        width: 24px;
+        line-height: 24px;
+        margin-left: 5px;
+        background: #3f6582;
+        border-radius: 50%;
+        float: right;
+        text-align: center;
+    }
 .sticky_btns button.active{
     background: #e47b44;
 }
@@ -249,7 +260,7 @@ button.btn.item_submit:focus{
         top: 0;
         padding-bottom: 30px;
         background: #fff;
-        z-index: 999;
+        z-index: 999999;
     }
 }
 @media only screen and (max-width: 991px) {
@@ -288,7 +299,7 @@ button.btn.item_submit:focus{
     .wrapper {
         background: #fff;
         margin: 5px 0 20px;
-        padding: 0 10px;
+        padding: 0 5px;
         border-top-left-radius: 20px;
     }
     .help i.fa.fa-info-circle {
@@ -303,9 +314,9 @@ button.btn.item_submit:focus{
         height: 42px;
         border: none;
         border-radius: 5px;
-        padding: 0 5px;
-        color: #fff;
-        margin: 0px 2px;
+        padding: 0 4px;
+    color: #fff;
+    margin: 0px 1px;
         display: block;
         float: left;
         outline: none;
@@ -313,7 +324,7 @@ button.btn.item_submit:focus{
         font-size: 12px;
     }
     .container{
-        padding: 0 5px;
+        padding: 0;
     }
     .account {
         font-size: 16px;
@@ -329,5 +340,10 @@ button.btn.item_submit:focus{
         font-size: 20px;
         padding-left: 0;
         margin-bottom: 10px;
+    }
+    .sticky_btns button span {
+        width: 18px;
+        line-height: 18px;
+        margin-left: 2px;
     }
 }
