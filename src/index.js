@@ -29,15 +29,15 @@ $(function() {
 $('.alendar').click(function() {
   if (
     $(this)
-      .closest('.list_item')
-      .innerHeight() != 124
+      .closest('.list_item_in')
+      .innerHeight() != 74
   )
     $(this)
-      .closest('.list_item')
-      .css('height', '124px');
+      .closest('.list_item_in')
+      .css('height', '74px');
   else
     $(this)
-      .closest('.list_item')
+      .closest('.list_item_in')
       .css('height', 'auto');
 });
 
