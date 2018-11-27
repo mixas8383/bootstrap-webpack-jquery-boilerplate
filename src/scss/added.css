@@ -165,10 +165,10 @@ button.btn.item_submit:focus{
         text-align: center;
     }
     .sticky_btns button.active{
-        background: #e47b44;
+        background: #e47b44 !important;
     }
     .sticky_btns button.active span{
-         background: #3f6582;
+         background: #3f6582 !important;
     }
 /*start list*/
 .blts span{

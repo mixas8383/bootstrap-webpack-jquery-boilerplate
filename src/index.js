@@ -25,7 +25,9 @@ $('.sticky_btns button').click(function() {
 $(function() {
   $('[data-toggle="popover"]').popover();
 });
-
+$('.example-popover').popover({
+  container: '.sticky',
+});
 $('.alendar').click(function() {
   if (
     $(this)
@@ -51,29 +53,24 @@ $('.alendar').click(function() {
 });
 
 // Your jQuery code
-
-if ($(window).width() > 999) {
-  $(window).scroll(function() {
-    var scrollDistance = $(window).scrollTop() + $('.sticky').height() + 220;
-
-    // Show/hide menu on scroll
-    //if (scrollDistance >= 850) {
-    //		$('nav').fadeIn("fast");
-    //} else {
-    //		$('nav').fadeOut("fast");
-    //}
-
-    // Assign active class to nav links while scolling
-    $('.lists').each(function(i) {
-      if ($(this).position().top <= scrollDistance) {
-        console.log($(this).position().top);
-        $('.sticky_btns button.active').removeClass('active');
-        $('.sticky_btns button')
-          .eq(i)
-          .addClass('active');
-      }
-    });
+$(window).scroll(function() {
+  var scrollDistance = $(window).scrollTop() + $('.sticky').height() + 220;
+  // Show/hide menu on scroll
+  //if (scrollDistance >= 850) {
+  //		$('nav').fadeIn("fast");
+  //} else {
+  //		$('nav').fadeOut("fast");
+  //}
+  // Assign active class to nav links while scolling
+  $('.lists').each(function(i) {
+    if ($(this).position().top <= scrollDistance) {
+      $('.sticky_btns button.active').removeClass('active');
+      $('.sticky_btns button')
+        .eq(i)
+        .addClass('active');
+    }
   });
-} else {
+});
+if ($(window).width() <= 999) {
   $('.sticky_btns').prependTo('main');
 }
