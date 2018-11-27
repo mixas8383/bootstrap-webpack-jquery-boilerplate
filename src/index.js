@@ -74,4 +74,6 @@ if ($(window).width() > 999) {
       }
     });
   });
+} else {
+  $('.sticky_btns').prependTo('main');
 }

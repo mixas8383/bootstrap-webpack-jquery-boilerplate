@@ -272,7 +272,14 @@ button.btn.item_submit:focus{
     }
 }
 @media only screen and (max-width: 991px) {
-
+    .sticky_btns {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        padding:10px 0;
+        background: #fff;
+        z-index: 999999;
+    }
     .points_detail {
         width: 100%;
     }
