@@ -158,8 +158,6 @@ button.btn.item_submit:focus{
     padding: 15px;
     background: #406583;
     color: #fff;
-    
-    overflow: hidden;
     margin-bottom: 2px;
     -webkit-transition: height 0.8s;
 	-moz-transition: height 0.8s;
@@ -194,6 +192,22 @@ button.btn.item_submit:focus{
     font-weight: bold;
     margin-bottom: 5px;
     display: none;
+}
+.blts.dropleft .dropdown-toggle::before,
+.bullets.dropleft .dropdown-toggle::before {
+    display: none;
+}
+.blts.dropleft button:focus,
+.bullets.dropleft button:focus,
+.blts.dropleft button:active,
+.bullets.dropleft button:active,
+.blts.dropleft button,
+.bullets.dropleft button {
+    background: transparent;
+    border:none;
+    box-shadow: none;
+    outline: none;
+    padding: 0px;
 }
 .blts {
     cursor: pointer;
