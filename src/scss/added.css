@@ -174,7 +174,7 @@ button.btn.item_submit:focus{
 	-moz-transition: height 0.8s;
 	transition: height 0.8s;
 }
-.lists2 .list_item_in{
+.lists2 .his{
     height: 74px;
     overflow: hidden;
 }
@@ -270,25 +270,16 @@ button.btn.item_submit:focus{
     .alendar{
         float: left;
     }
-    .list_item_title{
-        font-size: 20px;
-    }
+    
     .points {
         padding-right: 40px;
     }
     .sticky_btns button, .sticky_btns button:focus, .sticky_btns button:active{
         width: auto;
     }
-    .lists2 .list_item_in {
-         height: auto; 
-    }
+   
     
-    .list_item_cont_title{
-        display: block;
-    }
-    .list_item_cont{
-        display: none;
-    }
+    
 }
 
 

@@ -59,10 +59,12 @@ if ($(window).width() > 999) {
     if (
       $(this)
         .closest('.list_item_in')
+        .find('.his')
         .innerHeight() != 74
     ) {
       $(this)
         .closest('.list_item_in')
+        .find('.his')
         .css('height', '74px');
       $(this)
         .closest('.list_item_in')
@@ -71,6 +73,7 @@ if ($(window).width() > 999) {
     } else {
       $(this)
         .closest('.list_item_in')
+        .find('.his')
         .css('height', 'auto');
       $(this)
         .closest('.list_item_in')
@@ -80,10 +83,30 @@ if ($(window).width() > 999) {
   });
 } else {
   $('.alendar').click(function() {
-    $(this)
-      .closest('.list_item_in')
-      .find('.list_item_cont')
-      .toggle();
+    if (
+      $(this)
+        .closest('.list_item_in')
+        .find('.his')
+        .innerHeight() != 74
+    ) {
+      $(this)
+        .closest('.list_item_in')
+        .find('.his')
+        .css('height', '74px');
+      $(this)
+        .closest('.list_item_in')
+        .find('.list_item_cont_title')
+        .hide();
+    } else {
+      $(this)
+        .closest('.list_item_in')
+        .find('.his')
+        .css('height', 'auto');
+      $(this)
+        .closest('.list_item_in')
+        .find('.list_item_cont_title')
+        .show();
+    }
   });
 
   $('.sticky_btns').prependTo('main');
