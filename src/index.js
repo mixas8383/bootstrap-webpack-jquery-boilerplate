@@ -10,8 +10,11 @@ $('#alert').click(() => {
 });
 
 $('.sticky_btns button').click(function() {
-  $('.sticky_btns button.active').removeClass('active');
-  $(this).addClass('active');
+  $('.sticky_btns button.active')
+    .addClass('btn-outline-primary')
+    .removeClass('active btn-primary');
+  $(this).addClass('active btn-primary');
+
   // $('.'+$(this).attr('id')).hide();
   $([document.documentElement, document.body]).animate(
     {
@@ -41,10 +44,13 @@ $(window).scroll(function() {
   // Assign active class to nav links while scolling
   $('.lists').each(function(i) {
     if ($(this).position().top <= scrollDistance) {
-      $('.sticky_btns button.active').removeClass('active');
+      $('.sticky_btns button.active')
+        .addClass('btn-outline-primary')
+        .removeClass('active btn-primary');
       $('.sticky_btns button')
         .eq(i)
-        .addClass('active');
+        .removeClass('btn-outline-primary')
+        .addClass('active btn-primary');
     }
   });
 });

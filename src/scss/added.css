@@ -134,28 +134,26 @@ button.btn.item_submit:focus{
     right: 0;
     cursor: pointer;
 }
-.sticky_btns button, 
-    .sticky_btns button:focus, 
-    .sticky_btns button:active {
-        background: #3f6582;
-    height: 42px;
-    border: 2px solid #e47b44;
+.sticky_btns button, .sticky_btns button:focus, .sticky_btns button:active {
+        
+    /* height: 42px; */
+    /* border: 2px solid #e47b44; */
     border-radius: 5px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     text-align: left;
-    color: #fff;
     margin-right: 10px;
     display: block;
-    float: left;
-    outline: none;
+    /* float: left; */
+    /* outline: none; */
     width: 210px;
-    cursor: pointer;
+    /* cursor: pointer; */
     }
     .sticky_btns button span{
         display: inline-table;
         width: 24px;
         line-height: 24px;
         margin-left: 5px;
+        color: #fff;
        
         
     background: #e47b44;
@@ -249,7 +247,9 @@ button.btn.item_submit:focus{
     margin-right: 15px;
     line-height: 38px;
 }
-
+.progress{
+    height: 36px;
+}
 .btn i.fa.fa-check {
     margin-right: 4px;
 }
@@ -335,20 +335,7 @@ button.btn.item_submit:focus{
     .fa-info-circle:before {
         top: -15px;
     }
-    .sticky_btns button, .sticky_btns button:focus, .sticky_btns button:active {
-        background: #3f6582;
-        height: 42px;
-        border: none;
-        border-radius: 5px;
-        padding: 0 4px;
-    color: #fff;
-    margin: 0px 1px;
-        display: block;
-        float: left;
-        outline: none;
-        cursor: pointer;
-        font-size: 12px;
-    }
+   
     .container{
         padding: 0;
     }
