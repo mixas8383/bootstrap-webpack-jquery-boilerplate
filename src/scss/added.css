@@ -6,16 +6,7 @@ body{
     background: #d4d0c4;
 }
 
-.logo {
-    float: left;
-}
-.logo-text {
-    font-weight: bold;
-    font-size: 14px;
-    color: #333;
-    float: right;
-    padding-top:18px;
-}
+
 
 button.btn.item_submit {
     width: 100%;
@@ -40,7 +31,7 @@ button.btn.item_submit:focus{
     border-top-left-radius: 20px;
 }
 .help {
-    float: right;
+   
     color: #003c70;
     font-size: 18px;
     font-weight: bold;
@@ -57,7 +48,7 @@ button.btn.item_submit:focus{
     top: -20px;
 }
 .account {
-    float: right;
+    
     color: #003c70;
     font-size: 18px;
     font-weight: bold;
@@ -206,7 +197,7 @@ button.btn.item_submit:focus{
 }
 .blts {
     cursor: pointer;
-    float: right;
+    
     margin-left: 15px;
     padding-top: 4px;
 }
@@ -220,15 +211,12 @@ button.btn.item_submit:focus{
 .list_item_cont {
     margin-bottom: 20px;
 }
-.btn_registred {
-    
-}
 .btn_registred span{
     margin-right: 5px;
 }
 .alendar {
     font-size: 28px;
-    float: right;
+    
     cursor: pointer;
     margin-right: 15px;
     line-height: 38px;
@@ -267,9 +255,6 @@ button.btn.item_submit:focus{
     .points_detail {
         width: 100%;
     }
-    .alendar{
-        float: left;
-    }
     
     .points {
         padding-right: 40px;
@@ -296,7 +281,7 @@ button.btn.item_submit:focus{
         padding: 5px ;
     }
     .help {
-        float: left;
+        
         font-size: 16px;
         margin-right: 40px;
     }
