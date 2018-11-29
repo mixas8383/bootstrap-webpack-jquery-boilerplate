@@ -237,15 +237,7 @@ button.btn.item_submit:focus{
     margin-bottom: 20px;
 }
 .btn_registred {
-    float: right;
-    height: 40px;
-    border: 2px solid #e47b44;
-    border-radius: 5px;
-    padding: 0 10px 10px;
-    color: #fff;
-    display: block;
-    background: #e47b44;
-    line-height: 35px;
+    
 }
 .btn_registred span{
     margin-right: 5px;
@@ -258,7 +250,9 @@ button.btn.item_submit:focus{
     line-height: 38px;
 }
 
-
+.btn i.fa.fa-check {
+    margin-right: 4px;
+}
 
 
 @media only screen and (min-width: 992px) {
