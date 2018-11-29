@@ -135,18 +135,9 @@ button.btn.item_submit:focus{
     cursor: pointer;
 }
 .sticky_btns button, .sticky_btns button:focus, .sticky_btns button:active {
-        
-    /* height: 42px; */
-    /* border: 2px solid #e47b44; */
-    border-radius: 5px;
-    /* padding: 0 10px; */
     text-align: left;
     margin-right: 10px;
-    display: block;
-    /* float: left; */
-    /* outline: none; */
     width: 210px;
-    /* cursor: pointer; */
     }
     .sticky_btns button span{
         display: inline-table;
@@ -154,17 +145,12 @@ button.btn.item_submit:focus{
         line-height: 24px;
         margin-left: 5px;
         color: #fff;
-       
-        
     background: #e47b44;
-
         border-radius: 50%;
         float: right;
         text-align: center;
     }
-    .sticky_btns button.active{
-        background: #e47b44 !important;
-    }
+    
     .sticky_btns button.active span{
          background: #3f6582 !important;
     }
@@ -201,7 +187,7 @@ button.btn.item_submit:focus{
     padding-bottom: 20px;
     border-bottom: 1px solid #ececec;
 }
-.lists h2 {
+.lists > h2 {
     font-size: 24px;
     color: #004475;
     font-weight: bold;
@@ -269,11 +255,7 @@ button.btn.item_submit:focus{
     .list_item_conts {
         font-size: 14px;
     }
-    .list_item_price {
-        text-align: center;
-        padding: 0;
-        font-size: 16px;
-    }
+    
     .sticky_btns {
         position: -webkit-sticky;
         position: sticky;
@@ -310,12 +292,17 @@ button.btn.item_submit:focus{
 }
 
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
     .logo {
-        clear: both;
-        float: none;
         text-align: center;
         margin-bottom: 20px;
+    }
+    .sticky_btns button, .sticky_btns button:focus, .sticky_btns button:active {
+        text-align: left;
+        margin: 0 2px;
+        line-height: 18px;
+        font-size: 14px;
+        padding: 5px ;
     }
     .help {
         float: left;
