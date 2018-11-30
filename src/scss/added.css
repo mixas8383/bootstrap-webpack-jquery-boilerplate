@@ -253,15 +253,19 @@ button.btn.item_submit:focus{
     margin-bottom: 10px;
 }
 .overview {
-    background:#cceac2;
+    background:#d9ead3;
     padding: 15px;
     border: 1px solid #ccc;
+    min-height: 100%;
 }
 .overview > h2 {
     font-size: 18px;
     margin-bottom: 20px;
 }
-
+.height{
+    height: 50px;
+    width: 100%;
+}
 .form-group.-animated{
     position: relative;
 }
@@ -287,13 +291,13 @@ button.btn.item_submit:focus{
 }
 .form-group.labeled .form-control {
     height: 50px;
-    padding: 14px 20px 10px;
+    padding: 14px 15px 10px;
     font-size: 14px;
     color: #000000;
 }
 .form-group.labeled label {
     position: absolute;
-    left: 20px;
+    left: 25px;
     right: 0;
     top: 0;
     z-index: 0;
@@ -325,14 +329,38 @@ button.btn.item_submit:focus{
     font-size: 18px;
     margin-bottom: 25px;
 }
-
+.shipping_information,
 .contact_information {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+    padding: 0 15px;
 }
-
-
-
-
+.order-complate {
+    padding: 10px 40px;
+    background: #fafafa;
+    margin-bottom: 40px;
+}
+.price_details {
+    line-height: 30px;
+    margin-bottom: 15px;
+    padding: 15px 0;
+    border-top: 1px solid #ced4da;
+    border-bottom: 1px solid #ced4da;
+}
+span.total-price-lab {
+    color: #000;
+    font-weight: bold;
+}
+span.total-price {
+    font-size:20px;
+    color: #000;
+    font-weight: bold;
+}
+span.total-price > span{
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: normal;
+    margin-right: 5px;
+}
 @media only screen and (min-width: 992px) {
     .sticky{
         position: -webkit-sticky;
