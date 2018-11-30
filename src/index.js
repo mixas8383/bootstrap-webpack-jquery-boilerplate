@@ -111,3 +111,28 @@ if ($(window).width() > 999) {
 
   $('.sticky_btns').prependTo('main');
 }
+//label animation start
+$('.form-group.-animated .form-control').keyup(function() {
+  if ($(this).val() != '') {
+    $(this)
+      .parent('.form-group')
+      .addClass('-active');
+  } else {
+    $(this)
+      .parent('.form-group')
+      .removeClass('-active');
+  }
+});
+
+$('.form-group.-animated .form-control').focusin(function() {
+  $(this)
+    .parent('.form-group')
+    .addClass('-focus');
+});
+
+$('.form-group.-animated .form-control').focusout(function() {
+  $(this)
+    .parent('.form-group')
+    .removeClass('-focus');
+});
+//label animation end
